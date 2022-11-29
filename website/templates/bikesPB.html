@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Changed{% endblock %} {% block
+content %}
+
+<div class="bikes">
+  <div class="bikeinfo">
+    Below is a list of some in-stock bikes we have. We do a fairly good job of
+    updating, but it is not always accurate of our stock. We have many more
+    bikes in stock than just these. If you are interested in any of these bikes,
+    or other options you don't see here, contact us.
+  </div>
+  {% for r in result %}
+  <div class="bike-line"></div>
+  <div class="bike">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <a href="{{ r.src }}" target="_blank">
+          <img
+            src="{{ r.src }}"
+            alt=""
+            class="img-fluid"
+            style="border-radius: 5%"
+          />
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="{{ r.bike_page }}" target="_blank" style="color: #000000"
+          ><div class="title">{{ r.desc }}</div></a
+        >
+        <div class="title">{{ r.price }}</div>
+        {{ r.size }} <br />
+        {{ r.wheelsize }}<br />
+        {{ r.mat }} <br />
+        {{ r.front_travel }} <br />
+        {{ r.rear_travel }} <br />
+        <a href="{{ r.bike_page }}" target="_blank" style="color: #000000"
+          >Send Message</a
+        >
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+{% endblock %}

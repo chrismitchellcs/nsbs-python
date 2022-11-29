@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>North Shore Bike Shop</title>
+    <link rel="shortcut icon" type="image/x-icon" href="pics/fav2.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/nbr0zma.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e3cf0159fe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-collapse">
+      <div class="container text">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/static/pictures/pics/logo-black.png"
+            alt=""
+            width="140"
+            height="100%"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
+                <li>
+                  <a class="dropdown-item" href="shop.html">Parts & Gear</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="service.html" class="nav-link">Service</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav sm-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"
+                ><i class="fa-solid fa-location-dot"></i
+              ></a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="contact.html#contact"
+                ><i class="fa-solid fa-phone"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html#contact"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div>{% block content %} {% endblock %}</div>
+    <section class="section5">
+      <br />
+
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md text-center">
+          North Shore Bike Shop <br />
+          1831 Lonsdale Avenue <br />
+          North Vancouver, BC <br />
+          V7M 2J8
+        </div>
+        <div class="col-md p-5 text-center">
+          (604)929-6727 (call)<br />
+          (604)929-6727 (text)<br />
+          northshorebikeshop@gmail.com
+        </div>
+        <div class="col-md align-items-center text-center">
+          <a
+            href="https://www.instagram.com/north_shore_bike_shop/"
+            class="btn1"
+            target="_blank"
+            >Instagram</a
+          ><br /><br /><a
+            href="https://www.pinkbike.com/u/north-shore-bike-shop/buysell/"
+            class="btn1"
+            target="_blank"
+            >Pinkbike</a
+          >
+        </div>
+      </div>
+
+      <br />
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

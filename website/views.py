@@ -1,10 +1,7 @@
-from http.client import InvalidURL
-from flask import Blueprint, render_template, request, flash
-from urllib.request import urlopen
+from flask import Blueprint, render_template, request
 from urllib.error import *
 import requests
 from bs4 import BeautifulSoup
-from flask_mail import Mail, Message
 import smtplib
 
 

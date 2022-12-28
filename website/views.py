@@ -83,40 +83,69 @@ def getBikes():
     results = soup.find_all('table')
     for i, result in enumerate(results):
         if (i % 2) == 0:
-            item = result.find_all('b')
-            if len(item) == 9:
-                price = item[7].getText()
-            if len(item) == 7:
-                price = item[5].getText()
-            item = result.find_all('a')
-            # get hd image from actual page
-            bike_page = item[0]['href']
-            newPage = requests.get(bike_page)
-            newSoup = BeautifulSoup(newPage.content, "html.parser")
-            images = newSoup.find_all('div', {"id": "buysell-image"})
-            if len(images) == 1:
-                src = images[0]['data-fullimageurl']
-            item = result.find_all('a')
-            desc = item[1].getText()
-            item = result.find_all('div')
-            # handle FS 
-            if (len(item) == 7):
-                mat = item[4]
-                mat = mat.getText()
-                wheelsize = item[3]
-                wheelsize = wheelsize.getText()
-                size = item[2]
-                size = size.getText()
-                front_travel = item[5]
-                front_travel = front_travel.getText()
-                rear_travel = item[6]
-                rear_travel = rear_travel.getText()
-                result = Result(src, desc, mat, wheelsize, size, front_travel, rear_travel, price, bike_page)
-                result_list.append(result)
-            if (len(item) == 4):
-                pass
-            if (len(item) == 5):
-                pass
+            
+            detail = result.find_all('div', {"class": "itemdetail"})
+            if len(detail) == 5:
+                # print(result)
+                frame_size = detail[0].getText()
+                wheel_size = detail[1].getText()
+                material = detail[2].getText()
+                front_travel = detail[3].getText()
+                rear_travel = detail[4].getText()
+
+                price = result.find_all('td', {"class": "bsitem-price"})
+                price = price[0].getText()
+
+                website = result.find_all('a')
+                href = website[1].get('href')
+                desc = website[1].getText()
+
+                newPage = requests.get(href)
+                newSoup = BeautifulSoup(newPage.content, "html.parser")
+                images = newSoup.find_all('div', {"id": "buysell-image"})
+                if len(images) == 1:
+                    src = images[0]['data-fullimageurl']
+                    result = Result(src, desc, material, wheel_size, frame_size, front_travel, rear_travel, price, href)
+                    result_list.append(result)
+        
+        # print(result)
+        # if (i % 2) == 0:
+        #     item = result.find_all('b')
+        #     if len(item) == 8:
+        #         price = item[7].getText()
+        #         print(price)
+        #     if len(item) == 6:
+        #         price = item[5].getText()
+        #     item = result.find_all('a')
+        #     # get hd image from actual page
+        #     bike_page = item[0]['href']
+        #     newPage = requests.get(bike_page)
+        #     newSoup = BeautifulSoup(newPage.content, "html.parser")
+        #     images = newSoup.find_all('div', {"id": "buysell-image"})
+        #     if len(images) == 1:
+        #         src = images[0]['data-fullimageurl']
+        #     item = result.find_all('a')
+        #     desc = item[1].getText()
+        #     item = result.find_all('div')
+        #     # handle FS 
+        #     if (len(item) == 7):
+        #         mat = item[4]
+        #         mat = mat.getText()
+        #         wheelsize = item[3]
+        #         wheelsize = wheelsize.getText()
+        #         size = item[2]
+        #         size = size.getText()
+        #         front_travel = item[5]
+        #         front_travel = front_travel.getText()
+        #         rear_travel = item[6]
+        #         rear_travel = rear_travel.getText()
+        #         result = Result(src, desc, mat, wheelsize, size, front_travel, rear_travel, price, bike_page)
+        #         result_list.append(result)
+        #     if (len(item) == 4):
+        #         pass
+        #     if (len(item) == 5):
+        #         pass
+
     return result_list
             
         

@@ -1,19 +1,32 @@
 {% extends "base.html" %} {% block title %}Changed{% endblock %} {% block
 content %}
-
+<!-- 
 <div class="textonimage">
   <img src="/static/pictures/pics/SIK09398.jpg" alt="" />
   <darkness class="darkness"></darkness>
-  <caption1 class="caption1">
-    Your Local Mountain Bike Experts <br />
-  </caption1>
-  <caption2 class="caption2">
-    North Shore Bike Shop is proudly serving the mountain bike community since
-    2007. <br />
-    <br />
-    We are a group of passionate mountain bikers who are also keenly focused on
-    delivering excellent customer service.
-  </caption2>
+  <div class="logoonimage">
+    <img src="/static/pictures/pics/logo_northshorebikeshop.png" alt="" />
+    <caption1 class="caption1">
+      Your Local Mountain Bike Experts <br />
+    </caption1>
+    <caption2 class="caption2">
+      North Shore Bike Shop is proudly serving the mountain bike community since
+      2007. <br />
+      <br />
+      We are a group of passionate mountain bikers who are also keenly focused
+      on delivering excellent customer service.
+    </caption2>
+  </div>
+</div> -->
+
+<div class="parent">
+  <img src="/static/pictures/pics/lars.jpeg" class="image1" />
+  <div class="child">
+    <img src="/static/pictures/pics/logoforimage.png" class="image2" />
+    <div class="imagetext">
+      Your local mountain bike experts, proudly serving the community since 2007
+    </div>
+  </div>
 </div>
 
 <section class="section2">
@@ -26,8 +39,7 @@ content %}
         width="350"
         style="border-radius: 5%"
       />
-      <div class="custom-card-title">Visit or Contact Us</div>
-      <a href="" class="btn-card">More Info</a>
+      <a href="" class="btn-card">Visit or Contact Us</a>
     </div>
     <div class="col text-center">
       <img
@@ -37,8 +49,7 @@ content %}
         width="350"
         style="border-radius: 5%"
       />
-      <div class="custom-card-title">Shop at NSBS</div>
-      <a href="" class="btn-card">More Info</a>
+      <a href="" class="btn-card">Shop at NSBS</a>
     </div>
     <div class="col text-center">
       <img
@@ -48,8 +59,7 @@ content %}
         width="350"
         style="border-radius: 5%"
       />
-      <div class="custom-card-title">NSBS Service</div>
-      <a href="" class="btn-card">More Info</a>
+      <a href="" class="btn-card">NSBS Service</a>
     </div>
   </div>
 </section>
@@ -78,7 +88,10 @@ content %}
   </div>
 </section> -->
 
-<div class="row gx-0 align-items-center" style="background-color: #000000">
+<div
+  class="row gx-0 align-items-center"
+  style="background-color: var(--zigzag-bg-color)"
+>
   <div class="col-lg">
     <img
       src="/static/pictures/nsbs photos/20221014_194941.jpg"
@@ -86,7 +99,7 @@ content %}
       alt=""
     />
   </div>
-  <div class="col-lg" style="background-color: #000000">
+  <div class="col-lg" style="background-color: var(--zigzag-bg-color)">
     <div class="zigzag">Shop Bikes</div>
     <div class="zigzag-text">
       NSBS is well-stocked with youth bikes, dirt jumpers, trail, enduro and
@@ -99,9 +112,9 @@ content %}
 
 <div
   class="row gx-0 align-items-center flex-column-reverse flex-lg-row"
-  style="background-color: #000000"
+  style="background-color: var(--zigzag-bg-color)"
 >
-  <div class="col-lg" style="background-color: #000000">
+  <div class="col-lg" style="background-color: var(--zigzag-bg-color)">
     <div class="zigzag">Shop Parts and Gear</div>
     <div class="zigzag-text">
       At North Shore Bike Shop you will only find proven brands. Whether you
@@ -115,11 +128,17 @@ content %}
   </div>
 </div>
 
-<div class="row gx-0 align-items-center" style="background-color: #000000">
+<div
+  class="row gx-0 align-items-center"
+  style="background-color: var(--zigzag-bg-color)"
+>
   <div class="col-lg">
     <img src="/static/pictures/nsbs photos/IMG_1090.jpg" width="100%" alt="" />
   </div>
-  <div class="col-lg align-items-center" style="background-color: #000000">
+  <div
+    class="col-lg align-items-center"
+    style="background-color: var(--zigzag-bg-color)"
+  >
     <div class="zigzag">Service</div>
     <div class="zigzag-text">
       Our service department is tidy, fast, and staffed with competent mechanics

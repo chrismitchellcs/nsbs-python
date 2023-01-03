@@ -29,7 +29,7 @@
   <body>
     <nav class="navbar navbar-expand-lg sticky-top navbar-collapse">
       <div class="container text">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{url_for('views.home')}}">
           <img
             src="/static/pictures/pics/logo.png"
             alt=""
@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="/" class="nav-link">About</a>
+              <a href="{{url_for('views.home')}}" class="nav-link">About</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -91,16 +91,6 @@
                 ><i class="fa-solid fa-location-dot"></i
               ></a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="contact.html#contact"
-                ><i class="fa-solid fa-phone"></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html#contact"
-                ><i class="fa-solid fa-envelope"></i
-              ></a>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -117,7 +107,7 @@
         </div>
         <div class="col-md p-5 text-center">
           (604)929-6727 (call)<br />
-          (604)929-6727 (text)<br />
+          (604)928-6727 (text)<br />
           northshorebikeshop@gmail.com
         </div>
         <div class="col-md align-items-center text-center">

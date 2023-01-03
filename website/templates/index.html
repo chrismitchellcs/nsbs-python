@@ -42,7 +42,9 @@ content %}
         />
       </div>
       <div>
-        <a href="" class="btn-card">Visit or Contact Us</a>
+        <a href="{{url_for('views.contact', info='0')}}" class="btn-card"
+          >Visit or Contact Us</a
+        >
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
@@ -56,7 +58,7 @@ content %}
         />
       </div>
       <div>
-        <a href="" class="btn-card">Shop at NSBS</a>
+        <a href="{{url_for('views.bikes')}}" class="btn-card">Shop at NSBS</a>
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
@@ -70,7 +72,7 @@ content %}
         />
       </div>
       <div>
-        <a href="" class="btn-card">NSBS Service</a>
+        <a href="{{url_for('views.service')}}" class="btn-card">NSBS Service</a>
       </div>
     </div>
   </div>
@@ -118,7 +120,7 @@ content %}
       downhill bikes. Whether you are looking for an entry-level hardtail or the
       best bike money can buy, you will have options at NSBS.
     </div>
-    <a href="" class="zigzag-button">More Info</a>
+    <a href="{{url_for('views.bikes')}}" class="zigzag-button">More Info</a>
   </div>
 </div>
 
@@ -133,7 +135,7 @@ content %}
       need a replacement to get your bike going, or you want to upgrade to the
       latest and greatest, our shop is always ready to meet your biking needs.
     </div>
-    <a href="" class="zigzag-button">More Info</a>
+    <a href="{{url_for('views.shop')}}" class="zigzag-button">More Info</a>
   </div>
   <div class="col-lg">
     <img src="/static/pictures/nsbs photos/im2.jpg" width="100%" alt="" />
@@ -157,97 +159,8 @@ content %}
       who are eager to see you back on your bike. Our turn-around time is
       unmatched anywhere else in town. We fix everything bicycle related.
     </div>
-    <a href="" class="zigzag-button">More Info</a>
+    <a href="{{url_for('views.service')}}" class="zigzag-button">More Info</a>
   </div>
 </div>
-
-<!-- <section class="section1">
-  <div class="row align-items-center justify-content-between">
-    <div class="col-md">
-      <img src="/static/pictures/pics/20220711_164505.jpg" class="img-fluid" />
-    </div>
-    <div class="col-md p-5 order-first">
-      <h1>It's time for your new dream bike.</h1>
-      <p>
-        We are always well-stocked with youth bikes, dirt jumpers, trail, enduro
-        and downhill bikes. With a passionate crew of cyclists on staff, we have
-        tremendous experience across all disciplines of cycling and are happy to
-        help you get the most out of your riding time. We are proud to be
-        dealers of Transition and Norco, two local brands who continue to push
-        the boundaries and make the best bikes in the industry. Whether you are
-        looking for an entry-level hardtail or the best bike money can buy, you
-        will have options at NSBS.
-      </p>
-      <div class="container">
-        <a href="shop.html" class="btn2">View Bikes</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="div2">
-  <div class="row">
-    <div class="col-md p-5">
-      <div class="transition">
-        <img src="/static/pictures/pics/tranny.png" class="img-fluid" />
-      </div>
-      We are proud to be one of the largest Transition Bikes dealers in Canada!
-      Transition is a local company from just south of the border, in
-      Bellingham, WA. They make high end mountain bikes for all types of riding
-      from XC to DH. We are always well stocked in everything Transition offers.
-      Their bikes have been proven by multiple editorial awards in recent years
-      and always guarantee a party in the woods!
-    </div>
-    <div class="col-md p-5">
-      <div class="norco">
-        <img src="/static/pictures/pics/norco.png" class="img-fluid" />
-      </div>
-      Norco is a local brand from Coquitlam, BC that have a broad range of
-      bikes. We have Norco mountain bikes for all riders, from beginners looking
-      to do some trails and city riding, to experts wanting the fastest and most
-      advanced bike you can buy.
-    </div>
-  </div>
-</section>
-
-<section class="section1">
-  <div class="row align-items-center justify-content-between">
-    <div class="col-md p-5">
-      <h2>All the best parts at the ready.</h2>
-      <p class="lead">
-        At North Shore Bike Shop you will only find proven brands. We are riders
-        - we carry products our staff tested over the years riding the Pacific
-        Northwest and our customers love. Whether you need a replacement to get
-        your bike going, or you want to upgrade to the latest and greatest, our
-        shop is always ready to meet your biking needs.
-      </p>
-      <div class="container">
-        <a href="shop.html" class="btn2">Learn More</a>
-      </div>
-    </div>
-    <div class="col-md">
-      <img src="/static/pictures/pics/20220711_164559.jpg" class="img-fluid" />
-    </div>
-  </div>
-</section>
-
-<section class="section2">
-  <div class="container text-center">
-    <div>
-      <br />
-      <h2>We fix good.</h2>
-      <p class="lead">
-        Our service department is tidy, fast, and staffed with competent
-        mechanics who are eager to see you back on your bike. Our turn-around
-        time is unmatched anywhere else in town. We fix everything bicycle
-        related.
-      </p>
-      <div class="container">
-        <a href="service.html" class="btn1">Learn More</a>
-      </div>
-    </div>
-    <br />
-  </div>
-</section> -->
 
 {% endblock %}

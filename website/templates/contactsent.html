@@ -3,6 +3,9 @@ content %}
 
 <section class="section1">
   <div class="container">
+    <div class="emailsent" id="email">
+      Email Sent! We will try to reply within 24 hours.
+    </div>
     <div class="row align-items-center justify-content-between">
       <div class="col-md order-last">
         <!-- <div class="box"> -->
@@ -150,6 +153,7 @@ content %}
     font-size: 40px;
     margin-left: 5%;
     margin-top: 2%;
+    margin-bottom: 2%;
     font-weight: 600;
   "
 >
@@ -173,70 +177,16 @@ content %}
   to email us.
 </div>
 <div
-  style="font-family: open-sans, sans-serif; font-size: 20px; margin-left: 5%"
+  style="
+    font-family: open-sans, sans-serif;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+  "
 >
   You can also call us at
   <a href="tel:16049296727" target="_blank">(604) 929-6727</a> or call and text
   us at <a href="tel:16049286727" target="_blank">(604) 928-6727</a>.
 </div>
-<form action="/form" method="POST" style="margin-top: 2%">
-  <div
-    style="font-family: open-sans, sans-serif; font-size: 30px; margin-left: 5%"
-  >
-    Email Form
-  </div>
-  <div
-    class="form-group"
-    style="margin-left: 5%; margin-top: 2%; margin-right: 5%"
-  >
-    <label for="name">Your Email</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      placeholder="Enter your email (we will contact you here)"
-    />
-    <label for="name" style="margin-top: 1%">Your Name</label>
-    <input
-      type="name"
-      class="form-control"
-      id="name"
-      name="name"
-      placeholder="Enter your name"
-    />
-    <label for="name" style="margin-top: 1%">Subject</label>
-    <input
-      type="subject"
-      class="form-control"
-      id="subject"
-      name="subject"
-      placeholder="Enter email subject"
-    />
-    <label for="name" style="margin-top: 1%">Message</label>
-    <!-- <input
-      type="message"
-      class="form-control"
-      id="message"
-      name="message"
-      placeholder="Enter your message"
-    /> -->
-    <textarea
-      type="message"
-      class="form-control"
-      id="message"
-      name="message"
-      placeholder="Enter your message"
-      rows="5"
-    ></textarea>
-  </div>
-  <br />
-  <button
-    type="submit"
-    style="margin-left: 5%; margin-bottom: 20px"
-    class="btn-card"
-  >
-    Submit
-  </button>
-</form>
+
 {% endblock %}

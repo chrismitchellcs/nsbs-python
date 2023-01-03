@@ -351,6 +351,16 @@ tr {
   font-size: 1.4vw;
 }
 
+.emailsent {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  /* padding-bottom: 30px; */
+  font-family: open-sans, sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+}
+
 .linew {
   width: 100%;
   background-color: #ffffff;

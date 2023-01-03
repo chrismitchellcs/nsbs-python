@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, flash
 from urllib.error import *
 import requests
 from bs4 import BeautifulSoup
@@ -11,31 +11,44 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("index.html")
 
-@views.route('/contact.html', methods=['GET', 'POST'])
-def contact():
-    if request.method == 'POST':
-        name =  request.form["name"]
-        email = request.form["email"]
-        subject = request.form["subject"]
-        message = request.form["message"]
-        # send_email(name, email, subject, message)
+@views.route('/contact/<info>', methods=['GET', 'POST'])
+def contact(info):
+    # if request.method == 'POST':
+    #     name =  request.form["name"]
+    #     email = request.form["email"]
+    #     subject = request.form["subject"]
+    #     message = request.form["message"]
+    #     send_email(name, email, subject, message)
     
-        
-    return render_template("contact.html")
+    # if request.method == 'GET':
+    if info == '0':
+        return render_template("contact.html")
+    else:
+        return render_template("contactsent.html", id="email")
 
-@views.route('/service.html', methods=['GET', 'POST'])
+@views.route('/form', methods=['POST'])
+def form():
+    name =  request.form["name"]
+    email = request.form["email"]
+    subject = request.form["subject"]
+    message = request.form["message"]
+    send_email(name, email, subject, message)
+    flash("you are successfuly logged in")  
+    return redirect("/contact/1")
+
+@views.route('/service', methods=['GET', 'POST'])
 def service():
     return render_template("service.html")
 
-@views.route('/shop.html', methods=['GET', 'POST'])
+@views.route('/shop', methods=['GET', 'POST'])
 def shop():
     return render_template("shop.html")
 
-@views.route('/bikes.html', methods=['GET', 'POST'])
+@views.route('/bike', methods=['GET', 'POST'])
 def bikes():
     return render_template("bikes.html")
 
-@views.route('/bikesPB.html', methods=['GET', 'POST'])
+@views.route('/bikesPB', methods=['GET', 'POST'])
 def bikesPB():
     result_list = getBikes()
     return render_template("bikesPB.html", result = result_list)

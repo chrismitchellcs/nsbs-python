@@ -62,22 +62,32 @@
                 Shop
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
                 <li>
-                  <a class="dropdown-item" href="shop.html">Parts & Gear</a>
+                  <a class="dropdown-item" href="{{url_for('views.bikes')}}"
+                    >Bikes</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{{url_for('views.shop')}}"
+                    >Parts & Gear</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a href="service.html" class="nav-link">Service</a>
+              <a href="{{url_for('views.service')}}" class="nav-link"
+                >Service</a
+              >
             </li>
             <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="{{url_for('views.contact', info='0')}}" class="nav-link"
+                >Contact</a
+              >
             </li>
           </ul>
           <ul class="navbar-nav sm-icons">
             <li class="nav-item">
-              <a class="nav-link" href="contact.html"
+              <a class="nav-link" href="{{url_for('views.contact', info='0')}}"
                 ><i class="fa-solid fa-location-dot"></i
               ></a>
             </li>

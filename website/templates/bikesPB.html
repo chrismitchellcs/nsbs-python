@@ -32,7 +32,10 @@ content %}
         {{ r.mat }} <br />
         {{ r.front_travel }} <br />
         {{ r.rear_travel }} <br />
-        <a href="{{ r.bike_page }}" target="_blank" style="color: #000000"
+        <a
+          href="{{url_for('views.contact', info='0', _anchor='bottom')}}"
+          target="_blank"
+          style="color: #000000"
           >Send Message</a
         >
       </div>

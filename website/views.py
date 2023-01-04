@@ -24,7 +24,7 @@ def contact(info):
     if info == '0':
         return render_template("contact.html")
     else:
-        return render_template("contactsent.html", id="email")
+        return render_template("contactsent.html")
 
 @views.route('/form', methods=['POST'])
 def form():

@@ -32,7 +32,7 @@
   color: #ffffff !important;
   /* font-family: "Montserrat", sans-serif; */
   font-family: open-sans, sans-serif;
-  font-size: 1.1em !important;
+  font-size: 1em !important;
   margin-right: 50px;
 }
 
@@ -334,21 +334,23 @@ tr {
 }
 .child {
   position: absolute;
-  top: 10%;
-  left: 8%;
+  top: 50%;
+  left: 20%;
+  margin-top: -12%;
+  margin-left: -12.5%;
 }
 
 .image2 {
-  width: 50%;
+  width: 40%;
 }
 
 .imagetext {
   color: white;
   text-align: center;
   font-weight: 600;
-  width: 50%;
+  width: 40%;
   font-family: open-sans, sans-serif;
-  font-size: 1.4vw;
+  font-size: 1.6vw;
 }
 
 .emailsent {

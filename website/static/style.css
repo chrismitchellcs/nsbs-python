@@ -523,9 +523,30 @@ a.anchor {
   margin-right: 5%;
 }
 
+.bike-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #ccc;
+  padding: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.service-line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #ccc;
+  padding: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .bike-text {
   text-align: center;
   margin: 5%;
+  margin-bottom: 2%;
   font-family: open-sans, sans-serif;
   font-size: 20px;
 }

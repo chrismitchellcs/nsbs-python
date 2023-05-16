@@ -46,7 +46,8 @@ def shop():
 
 @views.route('/bike', methods=['GET', 'POST'])
 def bikes():
-    return render_template("bikes.html")
+    result_list = getBikes()
+    return render_template("bikes.html", result = result_list)
 
 @views.route('/bikesPB', methods=['GET', 'POST'])
 def bikesPB():
@@ -96,6 +97,11 @@ def getBikes():
     results = soup.find_all("div", {"class": "bsitem"})
     for i, result in enumerate(results):
         # if (i == 0):
+            # print(result)
+            table = result.find_all("tr", {"class": "bsitem-table"})[0]
+            src = table.find_all("a")[0].find_all("img")[0]["src"]
+            
+            # print(alink)
             item_details = result.find_all("div", {"class": "bsitem-title"})[0]
             bike_type = item_details.find_all("br")[0].next_sibling.strip()
             if (bike_type == "Enduro Bikes" or bike_type == "Trail Bikes" or bike_type == "Downhill Bikes" or bike_type == "Dirt Jump Bikes"):
@@ -115,13 +121,13 @@ def getBikes():
                     rear_travel = more_details[5].getText()
                     material = more_details[3].getText()
                 price = result.find_all('td', {"class": "bsitem-price"})[0].getText()
-                newPage = requests.get(website)
-                newSoup = BeautifulSoup(newPage.content, "html.parser")
-                images = newSoup.find_all('div', {"id": "buysell-image"})
-                if len(images) == 1:
-                    src = images[0]['data-fullimageurl']
-                    result = Result(src, desc, material, wheel_size, frame_size, front_travel, rear_travel, price, website)
-                    result_list.append(result)
+                # newPage = requests.get(website)
+                # newSoup = BeautifulSoup(newPage.content, "html.parser")
+                # images = newSoup.find_all('div', {"id": "buysell-image"})
+                # if len(images) == 1:
+                    # src = images[0]['data-fullimageurl']
+                result = Result(src, desc, material, wheel_size, frame_size, front_travel, rear_travel, price, website)
+                result_list.append(result)
         
         
         

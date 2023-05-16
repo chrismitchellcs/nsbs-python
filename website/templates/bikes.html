@@ -11,7 +11,7 @@ content %}
     downhill bikes. With a passionate crew of cyclists on staff, we have
     tremendous experience across all disciplines of cycling and are happy to
     help you get the most out of your riding time. Check out our
-    <a href="{{url_for('views.bikesPB')}}" style="color: #000"
+    <a href="#bikes" style="color: #000"
       >list of in-stock bikes here</a
     >
     to see some of our current options.<br />
@@ -33,7 +33,7 @@ content %}
     Transition is a local company from just south of the border, in Bellingham,
     WA. They make high end mountain bikes for all types of riding from XC to DH.
     We are always well stocked in everything Transition offers. Take a look
-    <a href="{{url_for('views.bikesPB')}}" style="color: #000">here</a> to see
+    <a href="#bikes" style="color: #000">here</a> to see
     some of out in stock transitions.
   </div>
 
@@ -50,11 +50,55 @@ content %}
     We have Norco mountain bikes for all riders, from beginners looking to do
     some trails and city riding, to experts wanting the fastest and most
     advanced bike you can buy. Take a look
-    <a href="{{url_for('views.bikesPB')}}" style="color: #000">here</a> to see
+    <a href="#bikes" style="color: #000">here</a> to see
     some of our in stock norcos. We also have many other norcos in stock that
     are not present there, so let us know what you are after and we will let you
     know if we have it / can get it.
   </div>
+
+  <a class="anchor" id="bikes"></a>
+
+  <div class="bikeinfo">
+    Below is a list of some in-stock bikes we have. We do a fairly good job of
+    updating, but it is not always accurate of our stock. We have many more
+    bikes in stock than just these. If you are interested in any of these bikes,
+    or other options you don't see here, contact us.
+  </div>
+  {% for r in result %}
+  <div class="bike-line"></div>
+  <div class="bike">
+    <div class="row align-items-center">
+      <div class="col-6">
+        <a href="{{ r.src }}" target="_blank">
+          <img
+            src="{{ r.src }}"
+            alt=""
+            class="img-fluid"
+            style="border-radius: 5%"
+          />
+        </a>
+      </div>
+      <div class="col-6">
+        <a href="{{ r.bike_page }}" target="_blank" style="color: #000000"
+          ><div class="title">{{ r.desc }}</div></a
+        >
+        <div class="title">{{ r.price }}</div>
+        {{ r.size }} <br />
+        {{ r.wheelsize }}<br />
+        {{ r.mat }} <br />
+        {{ r.front_travel }} <br />
+        {{ r.rear_travel }} <br />
+        <a
+          href="{{url_for('views.contact', info='0', _anchor='bottom')}}"
+          target="_blank"
+          style="color: #000000"
+          >Send Message</a
+        >
+      </div>
+      <!-- <div class="col-4"></div> -->
+    </div>
+  </div>
+  {% endfor %}
 
   <!-- <div class="row">
     <div class="col">

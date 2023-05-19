@@ -55,11 +55,14 @@ def bikesPB():
     return render_template("bikesPB.html", result = result_list)
 
 def send_email(name, email, subject, message):
-    email_message = f"Subject:{subject}\n\nName: {name}\nEmail: {email}\nSubject: {subject}\nMessage:{message}"
+    email_message = f"Subject:{subject}\n\nName: {name}\nEmail: {email}\nSubject: {subject}\nMessage:\n{message}"
     with smtplib.SMTP("smtp.gmail.com") as connection:
+        # connection.starttls()
+        # connection.login('chrismitch774@gmail.com', 'xinxvonhqmkhdmrk')
+        # connection.sendmail('chrismitch774@gmail.com', 'chrismitch774@gmail.com', email_message)
         connection.starttls()
-        connection.login('chrismitch774@gmail.com', 'xinxvonhqmkhdmrk')
-        connection.sendmail('chrismitch774@gmail.com', 'chrismitch774@gmail.com', email_message)
+        connection.login('northshorebikeshop@gmail.com', 'ekicbgetmbnlwbam')
+        connection.sendmail('northshorebikeshop@gmail.com', 'northshorebikeshop@gmail.com', email_message)
 
 
 

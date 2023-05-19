@@ -347,7 +347,7 @@ tr {
 .imagetext {
   color: white;
   text-align: center;
-  font-weight: 600;
+  font-weight: 300;
   width: 40%;
   font-family: open-sans, sans-serif;
   font-size: 1.6vw;
@@ -413,15 +413,15 @@ a.anchor {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   border-radius: 9999em;
 }
 
 .btn-card:hover {
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .text-pictures {
@@ -460,9 +460,9 @@ a.anchor {
   margin-bottom: 2%;
   border-radius: 5px;
 
-  background-color: white; /* Green */
+  background-color: #3c5d4e; /* Green */
   border: none;
-  color: black;
+  color: white;
   text-align: center;
   display: inline-block;
   text-decoration: none;
@@ -474,8 +474,8 @@ a.anchor {
 }
 
 .zigzag-button:hover {
-  color: white !important;
-  background-color: black;
+  color: black !important;
+  background-color: white;
 }
 
 .bikes {
@@ -546,6 +546,7 @@ a.anchor {
 .bike-text {
   text-align: center;
   margin: 5%;
+  margin-top: 2%;
   margin-bottom: 2%;
   font-family: open-sans, sans-serif;
   font-size: 20px;

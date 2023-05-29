@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, flash
+from flask import Blueprint, render_template, request, redirect, flash, url_for
 from urllib.error import *
 import requests
 from bs4 import BeautifulSoup
@@ -6,6 +6,10 @@ import smtplib
 
 
 views = Blueprint('views', __name__)
+
+@views.route('/favicon.ico')
+def favicon():
+    return url_for('static', filename='pictures/favicon.ico')
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
@@ -32,8 +36,7 @@ def form():
     email = request.form["email"]
     subject = request.form["subject"]
     message = request.form["message"]
-    send_email(name, email, subject, message)
-    flash("you are successfuly logged in")  
+    send_email(name, email, subject, message) 
     return redirect("/contact/1")
 
 @views.route('/service', methods=['GET', 'POST'])
